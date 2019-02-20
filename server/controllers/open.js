@@ -81,7 +81,7 @@ class openController extends baseController {
       return (ctx.body = yapi.commons.resReturn(null, 40022, '不存在的导入方式'));
     }
 
-    if (!content || !ctx.params.url) {
+    if (!content && !ctx.params.url) {
       return (ctx.body = yapi.commons.resReturn(null, 40022, 'json 或者 url 参数，不能都为空'));
     }
     try {
